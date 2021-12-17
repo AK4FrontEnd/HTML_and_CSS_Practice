@@ -27,6 +27,12 @@
     height: 60px;
 }
 
+.massenger:hover img{
+    width: 65px;
+    height: 65px;
+    transition: 0.1s;
+} 
+
 .feature-title{
     height: 130px;
     font-size: 22px;
@@ -110,6 +116,11 @@
     color: #fff;
 }
 
+.nav-bar nav ul li a:hover{
+    color: #57BBBF;
+    transition: 1s;
+}
+
 .banner{
     margin: auto;
     color: #fff;
@@ -138,7 +149,7 @@
 
 .banner .info a:hover{
     background-color: #3d9be9;
-    transition: background-color 1s;
+    transition: 1s;
 }
 
 /* service section */
