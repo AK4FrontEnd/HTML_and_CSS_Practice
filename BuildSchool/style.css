@@ -1,7 +1,13 @@
+.container-with-space{
+    max-width: 1200px;
+    margin: 150px auto;
+}
+
 .container{
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0px auto;
 }
+
 .flex{
     display: flex;
     flex-wrap: wrap;
@@ -9,6 +15,17 @@
     align-items: center;
 }
 
+.massenger{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    /* background-image: url(./images/messenger31.svg); */
+}
+
+.massenger img{
+    width: 60px;
+    height: 60px;
+}
 .feature-title{
     height: 130px;
     font-size: 22px;
@@ -16,8 +33,12 @@
     text-align: center;
     background-image: url(./images/feature-bg.webp);
     background-repeat: no-repeat;
-    background-size: contain;
-    margin-bottom: 60px;
+    background-size: cover;
+    /* margin-bottom: 60px; */
+}
+
+.feature-title .container{
+    margin: 0 auto;
 }
 
 .feature-title .overlay{
@@ -39,8 +60,8 @@
     height: 100vh;
     background-image: url(./images/banner.webp);
     background-repeat: no-repeat;
-    background-size: contain;
-    margin-bottom: 100px;
+    background-size: cover;
+    /* margin-bottom: 100px; */
 }
 .nav-bar{
     height: 100px;
@@ -82,7 +103,8 @@
 .banner{
     margin: auto;
     color: #fff;
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    height: calc(100% - 100px);
 }
 
 .banner .info h1{
@@ -103,10 +125,12 @@
     background-color: #3d9be999;
     padding: 10px 45px;
     margin: 0 20px;
+    /* transition: background-color 3s; */
 }
 
 .banner .info a:hover{
     background-color: #3d9be9;
+    transition: background-color 1s;
 }
 
 /* service section */
@@ -116,7 +140,7 @@
     margin: 0 auto;
     height: 350px;
     width: 80%;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
 }
 
 .service-group .service-item:nth-child(2n){
@@ -126,7 +150,7 @@
 .service-group .service-item .col-img, .col-info{
     width: 600px;
     margin: auto 15px;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .service-group .service-item .col-img img{
@@ -145,6 +169,8 @@
 .service-group .service-item .col-img p{
     font-size: 18px;
     padding: 0 20px;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .service-group .service-item .col-img p:first-of-type{
@@ -162,7 +188,7 @@
     width: 70%;
     margin: 0 auto;
     text-align: justify;
-    line-height: 1.2;
+    line-height: 1.4;
 }
 
 /* schedule section */
@@ -196,17 +222,19 @@
 }
 
 .schedule-item ul{
-    text-align: center;
+    width: 67%;
+    margin: 0 auto;
 }
 
 .schedule-item ul li{
     font-size: 14px;
     line-height: 24px;
+    margin-bottom: 10px;
 }
 
 /* tools section */
-.tools-group{
-    margin-bottom: 100px;
+.tools-group.flex{
+    align-items: flex-start;
 }
 
 .tools-group .tool-item{
@@ -214,17 +242,19 @@
 }
 
 .tools-group .tool-item .icons{
-    height: 200px;
+    min-height: 200px;
+    width: 240px;
+    margin: 0 auto;
 }
 
 .tools-group .tool-item .icons img{
-    max-height: 100%;  
-    max-width: 50%; 
+    max-height: 100px;  
+    max-width: 200px; 
     width: auto;
     height: auto;
     display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    margin: 20px auto;
+    /* margin-bottom: 20px; */
 }
 
 .tools-group .tool-item h3{
@@ -238,22 +268,28 @@
     margin: 0 auto;
     width: 80%;
     text-align: justify;
+    line-height: 1.4;
 }
 
 /* customer section */
 
 .customer-group{
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 
 .customer-group .customer-img{
     /* width: 100px; */
+    width: 220px;
+    margin: 15px;
+    padding: 15px;
 }
 
 .customer-group .customer-img img{
-    display: block;
-    width: 230px;
-    margin: 15px;
+    max-height: 100%;  
+    max-width: 100%; 
+    width: auto;
+    height: auto;
+    margin: auto;
 }
 
 /* footer */
@@ -262,6 +298,10 @@ footer{
     background-color: #EEEEEE;
     height: 380px;
     padding-top: 40px;
+}
+
+footer .container{
+    margin: 0 auto;
 }
 
 footer h2{
@@ -273,11 +313,13 @@ footer h2{
 footer p:first-of-type{
     width: 300px;
     margin-bottom: 40px;
+    line-height: 1.4;
 }
 
 footer ul li{
     font-size: 13px;
     line-height: 24px;
+    
 }
 
 footer .BS-more-info{
