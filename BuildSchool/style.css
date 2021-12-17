@@ -16,6 +16,7 @@
 }
 
 .massenger{
+    z-index: 10;
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -52,6 +53,13 @@
     margin: auto;
     text-align: center;
     margin-top: -70px;
+}
+
+.selected-disable{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
 }
 
 /* banner section */
@@ -139,7 +147,6 @@
     display: flex;
     margin: 0 auto;
     height: 350px;
-    width: 80%;
     justify-content: center;
 }
 
