@@ -370,7 +370,7 @@ header .container{
     padding-bottom: 50px;
 }
 
-.hot-products .products-list .product:first-of-type{
+.hot-products .products-list .product:first-child{
     margin-left: 10px;
 }
 
