@@ -1,0 +1,395 @@
+/* 共同樣式 */
+
+body{
+    background-color: #F5F5F5;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    max-width: 1200px;
+    background-color: #fff;
+    margin: 20px auto;
+    /* margin: 20px auto; */
+}
+.product{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 237px;
+    background-color: #fff;
+    padding: 0 15px;
+    margin: 0 0.5px;
+}
+
+.product img{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.product .price{
+    font-size: 18px;
+    color: #EE4D2D;
+    text-align: center;
+}
+
+.product .soled-count{
+    margin-top: 5px;
+    border-radius: 25px;
+    padding: 3px 0;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    background-color: #FFBDA6;
+}
+
+.on-sale{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #FFD424E6;
+    display: flex;
+}
+
+.on-sale > span{
+    font-size: 16px;
+    color: #EE4D2D;
+    text-align: center;
+    margin: auto;
+}
+
+.title-bar{
+    justify-content: start;
+    padding: 0 20px;
+    line-height: 60px;
+    font-size: 16px;
+    color: #0000008A;
+    height: 60px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* header */
+header{
+    /* width: 100%;
+    position: fixed; */
+    background: linear-gradient(-180deg,#f53d2d,#f63);
+}
+
+header .container{
+    background:none;
+    margin-top: 0;
+}
+
+.function-list, .search-list{
+    justify-content: space-between;
+    padding: 7px 0;
+}
+
+.function-list a, .function-list button{
+    margin: 0 6px;
+    padding: 0;
+    font-size: 14px;
+    color: #fff;
+    background: none;
+    border: none;
+}
+
+.header-icon{
+    width: 18px;
+    margin-right: 4px;
+}
+
+.search-list{
+    padding-top: 16px;
+    padding-bottom: 10px;
+}
+
+.logo img{
+    width: 155px;
+}
+
+.search{
+    background-color: #fff;
+    padding: 3px;
+    border-radius: 2px;
+}
+
+.search-input{
+    border: none;
+    width: 744px;
+    height: 34px;
+}
+
+.search-input::placeholder{
+    padding-left: 10px;
+}
+
+.search-btn{
+    border: none;
+    border-radius: 2px;
+    width: 60px;
+    height: 36px;
+    background-color: rgb(251, 85, 51);;
+}
+
+.search-btn .header-icon{
+    width: 14px;
+}
+
+.popular-tags{
+    font-size: 12px;
+    line-height: 14px;
+    color: #fff;
+    justify-content: start;
+    padding: 5px 0;;
+}
+
+.popular-tag{
+    margin-right: 12px;
+}
+
+.cart{
+    width: 100px;
+    height: 50px;
+}
+
+/* banner & nav */
+.banner-nav.container{
+    max-width: 1320px;
+}
+
+.banner{
+    padding-top: 30px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.banner .slider img{
+    max-width: 800px;
+    margin-right: 5px;
+}
+
+.banner .ad img{
+    max-width: 398px;
+
+}
+
+.nav > .flex{
+    justify-content: space-between;
+}
+
+.nav .nav-item{
+    font-size: 13px;
+    line-height: 14px;
+    color: #222222;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.nav .nav-item img{
+    width: 45px;
+    margin-bottom: 10px;
+}
+
+/* events */
+
+.container.recent-event{
+    background: none;
+}
+
+.CTA.flex{
+    justify-content: space-between;
+    width: 90%;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.CTA .slogan{
+    font-size: 16px;
+    color: #FFBABA;
+}
+
+.CTA > a{
+    font-size: 12px;
+    color: #FFBABA;
+}
+
+.products-area{
+    margin-top: -2px;
+    background-color: #ce121e;
+    color: #fff;
+}
+
+.product-list{
+    width: 96%;
+    margin: 0 auto;
+}
+
+/* categories */
+
+.categories-list.flex{
+    flex-wrap: wrap;
+}
+
+.categories-list li{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 120px;
+    height: 150px;
+    border: 0.5px solid rgba(0,0,0,0.05);
+    box-sizing: border-box;
+}
+
+.categories-list li img{
+    width: 85px;
+    margin: auto;
+}
+
+.categories-list li h4{
+    font-size: 14px;
+    color: #000000CC;
+    text-align: center;
+    padding-bottom: 25px;
+    margin-top: auto;
+}
+
+/* 限時特賣 */
+
+.time-on-sale .title-bar > img{
+    width: 96px;
+    margin-right: 20px;
+}
+
+.timer > span{
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 3px;
+    border-radius: 2px;
+}
+
+/* 蝦皮商城 */
+
+.shopee-mall .title-bar span{
+    margin-right: 15px;
+}
+
+.shopee-mall .title-bar span:first-of-type{
+    color: #D0011B;
+}
+
+.shopee-mall .title-bar span img{
+    width: 17px;
+    margin-right: 6px;
+}
+
+.shopee-mall-area.flex{
+    justify-content: start;
+}
+
+.shopee-mall-area .ad > img{
+    padding: 10px 0 0 10px;
+}
+
+.events-list .flex{
+    flex-wrap: wrap;
+}
+
+.events-list li{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.events-list li img{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.events-list li p{
+    text-align: center;
+    font-size: 18px;
+    color: #D0011B;
+    margin-bottom: 25px;
+    margin-top: -20px;
+}
+
+/* hot-key */
+
+.hot-key-list.flex{
+    justify-content: start;
+}
+
+.hot-key-list > li{
+    border-right: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+}
+
+.hot-key-list > li .info{
+    padding: 20px 10px 20px 20px;
+    line-height: 18px;
+}
+
+.hot-key-list > li .info h4{
+    font-size: 14px;
+    color: #222222;
+}
+.hot-key-list > li .info p{
+    font-size: 13px;
+    color: #757575;
+}
+
+.hot-key-list > li img{
+    width: 100px;
+    margin-right: 10px;
+}
+
+/* hot-products */
+
+.hot-products .title-bar.flex{
+    justify-content: space-between;
+
+}
+
+.hot-products .title-bar > span{
+    color: #EE4D2D;
+}
+
+.products-list{
+    padding-bottom: 50px;
+}
+
+.product{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+img.top{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32px;
+}
+
+.product > img{
+    margin: auto;
+}
+
+.product > h3{
+    margin-top: auto;
+    font-size: 18px;
+    color: #555555;
+}
