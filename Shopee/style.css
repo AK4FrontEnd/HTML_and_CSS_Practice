@@ -15,6 +15,9 @@ body{
     margin: 20px auto;
 }
 .product{
+    position: relative;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 237px;
     background-color: #fff;
@@ -24,7 +27,7 @@ body{
 
 .product img{
     width: 90%;
-    margin: 0 auto;
+    margin: auto;
     margin-bottom: 15px;
 }
 
@@ -363,28 +366,22 @@ header .container{
     color: #EE4D2D;
 }
 
-.products-list{
+.hot-products .products-list{
     padding-bottom: 50px;
 }
 
-.product{
-    position: relative;
-    display: flex;
-    flex-direction: column;
+.hot-products .products-list .product:first-of-type{
+    margin-left: 10px;
 }
 
-img.top{
+.hot-products img.top{
     position: absolute;
     left: 0;
     top: 0;
     width: 32px;
 }
 
-.product > img{
-    margin: auto;
-}
-
-.product > h3{
+.hot-products .product > h3{
     margin-top: auto;
     font-size: 18px;
     color: #555555;
