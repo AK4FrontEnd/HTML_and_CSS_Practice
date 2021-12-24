@@ -52,16 +52,48 @@ body{
     right: 0;
     top: 0;
     width: 50px;
-    height: 50px;
+    height: 40px;
     background-color: #FFD424E6;
     display: flex;
 }
 
+.on-sale::after{
+    content: '';
+    position: absolute;
+    top: 40px;
+    width: 0;
+    height: 0;
+    border-left: 25px solid #FFD424E6;
+    border-right: 25px solid #FFD424E6;
+    border-bottom: 10px solid transparent;
+}
+
 .on-sale > span{
-    font-size: 16px;
+    font-size: 14px;
     color: #EE4D2D;
     text-align: center;
     margin: auto;
+}
+
+.mall-tag{
+    position: absolute;
+    top: 10px;
+    left: -2;
+    font-size: 10px;
+    padding: 2px 5px;
+    background-color: #d0011b;
+    color: #fff;
+}
+
+.mall-tag::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -4px;
+    left: 0;
+    border-right: 4px solid #68020f;
+    border-bottom: 4px solid transparent;
 }
 
 .title-bar{
@@ -76,8 +108,10 @@ body{
 
 /* header */
 header{
-    /* width: 100%;
-    position: fixed; */
+    z-index: 10;
+    width: 100%;
+    position: sticky;
+    top: 0;
     background: linear-gradient(-180deg,#f53d2d,#f63);
 }
 
@@ -385,4 +419,118 @@ header .container{
     margin-top: auto;
     font-size: 18px;
     color: #555555;
+}
+
+/* 每日精選 */
+.container.everyday{
+    background: none;
+}
+
+.everyday .title-bar{
+    background-color: #fff;
+}
+
+.everyday .product-list.flex{
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.everyday .product{
+    width: 191px;
+    height: 290px;
+    border: none;
+    margin: 5px;
+    padding: 0;
+}
+
+.everyday .product:nth-of-type(6n+1){
+    margin-left: 0;
+}
+
+.everyday .product:nth-of-type(6n+6){
+    margin-right: 0;
+}
+
+.everyday .product img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.everyday .product .info{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+    height: inherit;
+}
+
+.everyday .product .info .price{
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.everyday .product .info h5{
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #000000DE;
+    overflow: hidden;
+    display: -webkit-box;
+    /* text-overflow: ellipsis; */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    /* white-space: normal; */
+}
+
+.everyday .product .info .soled-count{
+    background: none;
+    font-size: 12px;
+    color: #0000008A;
+}
+
+.see-more-btn{
+    display: block;
+    width: 390px;
+    margin: 0 auto;
+    color: #555;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.09);
+    line-height: 38px;
+    margin-bottom: 70px;
+}
+
+/* footer */
+
+footer, footer .container{
+    background-color: #fff;
+}
+
+footer .container.feature{
+    padding: 70px 0;
+    border-bottom: 1px solid rgba(0,0,0,.09)
+}
+
+.feature h2{
+    font-size: 14px;
+    line-height: 23.8px;
+    font-weight: 700;
+    color: rgba(0,0,0,.54);
+}
+
+.feature p{
+    font-size: .75rem;
+    color: rgba(0,0,0,.54);
+    line-height: 23.8px;
+    margin: 8px 0 0;
+    margin-bottom: 25px;
+}
+
+.feature p:last-of-type{
+    margin-bottom: 0;
+}
+
+.container.category-footer{
+    padding: 70px 0;
 }
