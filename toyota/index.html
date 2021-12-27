@@ -4,17 +4,163 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="reset.css">
     <title>Document</title>
+    <style>
+        .container{
+            width: 960px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        .title-box{
+            position: relative;
+            width: 33.333333%;
+            background-color: #ccc;
+            color: #fff;
+        }
+        .title-box .title{
+            background-color: red;
+            padding: 20px;
+            /* z-index: 3; */
+        }
+        .title-box .title h2{
+            font-size: 40px;
+        }
+        .title-box .title-text{
+            background-color: #000;
+            padding: 20px;
+            position: absolute;
+        }
+        .video{
+            position: relative;
+            width: 700px;
+            border: 1px solid #000;
+            margin-left: 150px;
+            /* z-index: 2; */
+        }
+        /* .video:before{
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background-color: #ccc;
+            right: -60px;
+            top: -40px;
+            z-index: 0;
+        } */
+        .video a{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            /* z-index: 1; */
+        }
+        .video .pic{
+            width: 685px;
+        }
+        .video .pic img{
+            vertical-align: top;
+            /* z-index: 1; */
+        }
+        .video .btn{
+            width: 60px;
+            height: 40px;
+            background-color: #ccc;
+            margin-right: -45px;
+        }
+        .txt{
+            margin-top: -2em;
+            width: 700px;
+            background-color: #aaa;
+            padding: 10px;
+            box-sizing: border-box;
+            position: relative;
+            /* z-index: 2; */
+            margin-left: 100px;
+        }
+        .slogan{
+            display: flex;
+            align-items: center;
+        }
+        .slogan:after{
+            content: '';
+            display: inline-block;
+            width: 0;
+            border-bottom: 1px solid #000;
+            margin-left: 10px;
+            flex-grow: 1;
+        }
+        .container:nth-child(even) .title-box{
+            margin-left: auto;
+        }
+        .container:nth-child(even) .video{
+            margin-left: 60px;
+        }
+        .container:nth-child(even) .video a{
+            flex-direction: row-reverse;
+        }
+        /* .container:nth-child(even) .video .pic{
+            margin-left: -45px;
+            margin-right: auto;
+        } */
+        .container:nth-child(even) .txt{
+            margin-left: 160px;
+        }
+    </style>
 </head>
 <body>
-    <div class="item">
-        <div class="title-box">
-            <h1 class="title"><span>01</span>操控樂趣</h1>
-            <div class="info">設備上班見面成功技術清晰手續作戰印刷伺服器，右鍵場所可以用運用身邊市政府，拍攝證實也就命令擔心對我外貿最好的看來下面上門保密一下部落格，龍岡合理我看，大會本網。</div>
+    <div class="group">
+        <div class="container">
+            <div class="title-box">
+                <h2 class="title"><span class="number">01</span>廠家也嗨</h2>
+                <div class="title-text">
+                    <h3>研究我來，彼此迅速。</h3>
+                    <p>主席工作精華請大家豐原早就不論維護矛盾足球利潤，資本用途失望水溝農業，是他三年。</p>
+                </div>
+            </div>
+            <div class="video">
+                <a href="">
+                    <div class="pic">
+                        <img src="https://picsum.photos/700/425/?random=1">
+                    </div>
+                    <div class="btn"></div>
+                </a>
+            </div>
+            <div class="txt">
+                <span class="slogan">因為我們做了這些革新</span>
+                <h3>防止文化</h3>
+                <p>魯蛇特徵，破解看起來回來，窗口傳播，地。</p>
+                <h3>防止文化</h3>
+                <p>起來實施主板我有類別老公部落格，老公完了國際，遊客用途，編。</p>
+                <h3>防止文化</h3>
+                <p>房東警察課堂，智能告訴你來的眼光，臺灣宣佈允許處理，損失推。</p>
+            </div>
         </div>
-        <div class="desc">即可收到資料權威我這從來沒一旦請問讓人更新來了搜尋一副相機，原料辦公將來人大還是貫徹報紙本次說什麼呵呵螢幕，報價意外稿件垃圾走向創建直接多多我在，可能見到輕易什麼運動心靈玩具過去我對重量機票通知，明。</div>
+        <div class="container">
+            <div class="title-box">
+                <h2 class="title"><span class="number">01</span>廠家也嗨</h2>
+                <div class="title-text">
+                    <h3>研究我來，彼此迅速。</h3>
+                    <p>主席工作精華請大家豐原早就不論維護矛盾足球利潤，資本用途失望水溝農業，是他三年。</p>
+                </div>
+            </div>
+            <div class="video">
+                <a href="">
+                    <div class="pic">
+                        <img src="https://picsum.photos/700/425/?random=1">
+                    </div>
+                    <div class="btn"></div>
+                </a>
+            </div>
+            <div class="txt">
+                <span class="slogan">因為我們做了這些革新</span>
+                <h3>防止文化</h3>
+                <p>魯蛇特徵，破解看起來回來，窗口傳播，地。</p>
+                <h3>防止文化</h3>
+                <p>起來實施主板我有類別老公部落格，老公完了國際，遊客用途，編。</p>
+                <h3>防止文化</h3>
+                <p>房東警察課堂，智能告訴你來的眼光，臺灣宣佈允許處理，損失推。</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
