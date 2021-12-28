@@ -275,6 +275,9 @@ header nav.flex{
         border: none;
         border: 1px solid #1fde82;
     }
+    .banner-title, .section-title{
+        width: 500px;
+    }
     .service-card.col{
         padding: 20px;
         margin: 15px;
@@ -293,6 +296,10 @@ header nav.flex{
     .service-card .read-more{
         margin-top: auto;
         margin-bottom: 30px;
+    }
+    .why-us .col:nth-of-type(1){
+        display: flex;
+        flex-wrap: wrap;
     }
     .why-us .card{
         margin: 12px;
