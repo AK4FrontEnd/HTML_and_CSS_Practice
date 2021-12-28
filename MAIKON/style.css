@@ -131,6 +131,44 @@ header nav.flex{
     margin-bottom: 22px;
 }
 
+/* section why-us */
+.why-us{
+    background-color: #256fff;
+    padding: 50px 0;
+}
+.why-us .card{
+    width: 100%;
+    margin: 15px;
+    padding: 18px 15px;
+    background-color: #3f81ff;
+    border-radius: 10px;
+}
+.why-us .card .count,
+.why-us .card .info-txt{
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.why-us .card .count{
+    color: #ffffff;
+    font-size: 34px;
+    line-height: 1.3em;
+}
+.why-us .section-title,
+.why-us .info-txt,
+.why-us .theme-btn.btn-reverse{
+    color: #fff;
+}
+.why-us .theme-btn.btn-reverse{
+    border-color: #fff;
+    background-color: #256fff;
+}
+.why-us .theme-btn.btn-reverse:hover{
+    border-color: var(--theme-color);
+    background-color: var(--theme-color);
+}
+
 /* RWD */
 @media screen and (min-width: 768px) {
     :root{
@@ -205,6 +243,15 @@ header nav.flex{
     .service-card .read-more{
         margin-top: auto;
     }
+    .why-us .row{
+        align-items: center;
+    } 
+    .why-us .card{
+        width: 40%;
+        margin: 7px;
+        padding: 12px 10px;
+        flex-grow: 1;
+    }
 }
 @media screen and (min-width: 1024px) {
     header nav.flex .nav.flex{
@@ -218,6 +265,15 @@ header nav.flex{
     .container{
         max-width: 1200px;
         margin: 30px auto 20px auto;
+    }
+    .theme-btn:hover{
+        background-color: var(--btn-hover-bgc);
+    }
+    .btn-reverse:hover{
+        color: #fff;
+        background-color: var(--theme-color);
+        border: none;
+        border: 1px solid #1fde82;
     }
     .service-card.col{
         padding: 20px;
@@ -237,5 +293,19 @@ header nav.flex{
     .service-card .read-more{
         margin-top: auto;
         margin-bottom: 30px;
+    }
+    .why-us .card{
+        margin: 12px;
+        padding: 40px 20px;
+        box-sizing: border-box;
+    }
+    .why-us .card .count,
+    .why-us .card .info-txt{
+        text-align: start;
+    }
+    .why-us .card .count{
+        font-size: 58px;
+        font-weight: 600;
+        margin-bottom: 20px;
     }
 }
