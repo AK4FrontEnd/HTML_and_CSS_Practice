@@ -301,10 +301,6 @@ header nav.flex{
         margin-top: auto;
         margin-bottom: 30px;
     }
-    /* .why-us .col:nth-of-type(1){
-        display: flex;
-        flex-wrap: wrap;
-    } */
     .why-us .card{
         margin: 12px;
         padding: 40px 20px;
