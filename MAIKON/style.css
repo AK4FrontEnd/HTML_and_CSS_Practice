@@ -246,7 +246,7 @@ header nav.flex{
     .why-us .row{
         align-items: center;
     } 
-    .why-us .col:nth-of-type(1){
+    .why-us .card-group{
         display: flex;
         flex-wrap: wrap;
     }
