@@ -80,7 +80,11 @@ header nav.flex{
 .contact .row .col > img{
     width: 100%;
 }
-v
+.banner-title{
+    font-size: var(--section-title-fz);
+    color: var(--font-color-title);
+    margin-bottom: 22px;
+}
 .info-txt{
     margin-bottom: 30px;
 }
@@ -178,7 +182,6 @@ v
         font-size: 42px;
         line-height: 1.3em;
         color: var(--font-color-title);
-        margin-bottom: 22px;
     }
     .service .section-title{
         width: 400px;
