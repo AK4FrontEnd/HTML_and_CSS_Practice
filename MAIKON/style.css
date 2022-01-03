@@ -4,7 +4,7 @@
     --theme-color: #1fde82;
     --btn-hover-bgc: #5d6678;
     --section-title-fz: 30px;
-    --section-sub-title-fz: 22px;
+    --section-sub-title-fz: 20px;
     --info-fz: 14px; 
 }
 .container{
@@ -53,6 +53,10 @@
     border: none;
     border: 1px solid #1fde82;
 }
+.row{
+    align-items: center;
+    justify-content: center;
+}
 
 /* header */
 header{
@@ -63,7 +67,7 @@ header{
 header .container.flex{
     justify-content: space-between;
     height: 90px;
-    margin: 0;
+    margin: 0 auto;
 }
 header nav.flex{
     display: none;
@@ -78,7 +82,12 @@ header nav.flex{
 .banner .row .col > img,
 .creative .row .col > img,
 .contact .row .col > img{
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+.contact .row .col > img{
+    width: 80%;
 }
 .banner-title{
     font-size: var(--section-title-fz);
@@ -168,6 +177,44 @@ header nav.flex{
     background-color: var(--theme-color);
 }
 
+/* steps */
+.steps .number{
+    width: 70px;
+    margin-top: 30px;
+}
+.steps img{
+    width: 100%;
+}
+.steps .section-sub-title{
+    font-size: var(--section-sub-title-fz);
+    margin: 25px 0;
+    line-height: 1.3em;
+}
+
+/* projects */
+.projects{
+    background-color: #F8FBFF;
+    padding: 20px 0;
+}
+.projects .section-title{
+    font-weight: 300;
+}
+.projects .theme-btn{
+    margin-bottom: 20px;
+}
+.projects .col{
+    position: relative;
+}
+.projects .col img{
+    display: block;
+    width: 90%;
+    border-radius: 10px;
+    margin: 15px auto;
+}
+.projects .col .card-overlay{
+    display: none;
+}
+
 /* RWD */
 @media screen and (min-width: 768px) {
     :root{
@@ -186,7 +233,7 @@ header nav.flex{
     header .container.flex{
         justify-content: space-between;
         height: 90px;
-        margin: 0;
+        margin: 0 auto;
     }
     header nav.flex{
         display:inherit;
@@ -221,11 +268,13 @@ header nav.flex{
         color: var(--font-color-title);
     }
     .service .section-title{
-        width: 400px;
+        /* width: 400px; */
+
         margin: 20px 0;
     }
     .service-card.col{
         width: 30%;
+        height: 325px;
         display: flex;
         flex-direction: column;
         flex-grow: 1;
@@ -251,9 +300,43 @@ header nav.flex{
     }
     .why-us .card{
         width: 40%;
-        margin: 7px;
-        padding: 12px 10px;
+        height: 170px;
+        margin: 13px;
+        padding: 20px 15px;
+        box-sizing: border-box;
         flex-grow: 1;
+    }
+    .why-us .card .count{
+        margin-bottom: 10px;
+    }
+    /* steps */
+    .steps .group{
+        display: flex;
+    }
+    .steps .row{
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+    .steps .row:nth-child(even) .group{
+        order:1;
+    }
+    .steps .group .number{
+        width: 70px;
+        margin-right: 30px;
+    }
+    .steps .section-sub-title{
+        margin: 15px 0;
+    }
+    .steps .info-area{
+        width: 100%;
+    }
+    .projects .container{
+        position: relative;
+    }
+    .projects .theme-btn{
+        position: absolute;
+        right: 0;
+        top: 10px;
     }
 }
 @media screen and (min-width: 1024px) {
@@ -263,8 +346,28 @@ header nav.flex{
     header nav.flex .nav.flex li{
         margin-right: 20px;
     }
+    .contact .row{
+        align-items: start;
+    }
+    .contact .section-title{
+        margin-top: 80px;
+    }
+    .service-card.col{
+        height: 280px;
+    }
+    .projects .row{
+        justify-content: space-between;
+    }
+    .projects .col img{
+        width: 100%;
+        margin: 0;
+    }
 }
 @media screen and (min-width: 1200px) {
+    :root{
+        --section-sub-title-fz: 22px;
+        --section-title-fz: 42px;
+    }
     .container{
         max-width: 1200px;
         margin: 30px auto 20px auto;
@@ -278,12 +381,20 @@ header nav.flex{
         border: none;
         border: 1px solid #1fde82;
     }
+    .banner-title{
+        font-size: 58px;
+        font-weight: 300;
+    }
     .banner-title, .section-title{
         width: 500px;
+    }
+    .service .section-title{
+        font-size: var(--section-title-fz);
     }
     .service-card.col{
         padding: 20px;
         margin: 15px;
+        height: auto;
     }
     .service-card .service-icon{
         margin-bottom: 40px;
@@ -300,8 +411,12 @@ header nav.flex{
         margin-top: auto;
         margin-bottom: 30px;
     }
+    .why-us .card-group{
+        margin-right: auto;
+    }
     .why-us .card{
         margin: 12px;
+        height: auto;
         padding: 40px 20px;
         box-sizing: border-box;
     }
@@ -313,5 +428,43 @@ header nav.flex{
         font-size: 58px;
         font-weight: 600;
         margin-bottom: 20px;
+    }
+    .steps .section-title{
+        margin-top: 100px;
+        margin-bottom: 60px;
+    }
+    .steps .row{
+        justify-content: center;
+        margin: -20px 0;
+    }
+    .steps .row:nth-of-type(2){
+        justify-content: flex-end;
+    }
+    .steps .group{
+        margin: 0 30px;
+    }
+    .steps .group .number{
+        width: 100px;
+        margin-right: 50px;
+    }
+    .projects .col:hover .card-overlay{
+        color: #fff;
+        font-size: var(--section-title-fz);
+        border-radius: 10px;
+        background-color: #1fde82f8;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding: 80px 30px;
+        box-sizing: border-box;
+    }
+    .projects .card-overlay a{
+        color: #fff;
+        font-size: 20px;
+        position: absolute;
+        bottom: 100px;
     }
 }
