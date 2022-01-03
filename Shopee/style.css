@@ -179,9 +179,12 @@ header .container{
 .popular-tags{
     font-size: 12px;
     line-height: 14px;
-    color: #fff;
     justify-content: start;
     padding: 5px 0;;
+}
+
+.popular-tags a{
+    color: #fff;
 }
 
 .popular-tag{
@@ -221,9 +224,12 @@ header .container{
 .nav .nav-item{
     font-size: 13px;
     line-height: 14px;
-    color: #222222;
     text-align: center;
     padding: 20px 10px;
+}
+
+.nav .nav-item a{
+    color: #222222;
 }
 
 .nav .nav-item img{
@@ -263,6 +269,10 @@ header .container{
 .product-list{
     width: 96%;
     margin: 0 auto;
+}
+
+.product-list .product a{
+    display: block;
 }
 
 /* categories */
