@@ -37,6 +37,7 @@
     font-weight: 600;
     transition: color 1s, background-color 0.5s;
     display: inline-block;
+    box-shadow: 0px 8px 32px 0px rgb(31 222 130 / 46%);
 }
 .theme-btn:active{
     background-color: var(--btn-hover-bgc);
@@ -46,6 +47,7 @@
     border: 1px solid #3b3d422f;
     color: #3b3d42c7;
     padding: 11px 27px;
+    box-shadow: none;
 }
 .btn-reverse:active{
     color: #fff;
@@ -132,6 +134,7 @@ header nav.flex{
     width: 70px;
     height: 70px;
     margin-bottom: 20px;
+    filter: drop-shadow(0px 8px 32px rgba(31,222,130,.46));
 }
 .service-card .service-title{
     font-size: var(--section-title-fz);
@@ -182,6 +185,9 @@ header nav.flex{
     width: 70px;
     margin-top: 30px;
 }
+.steps .number img{
+    filter: drop-shadow(0px 8px 32px rgba(31,222,130,.6));
+}
 .steps img{
     width: 100%;
 }
@@ -212,8 +218,124 @@ header nav.flex{
     margin: 15px auto;
 }
 .projects .col .card-overlay{
+    opacity: 0;
+}
+.projects .col .card-overlay p, .projects .col .card-overlay{
+    /* opacity: 0; */
     display: none;
 }
+
+/* form */
+.form .container{
+    padding: 40px 5px;
+}
+.form img{
+    width: 100%;
+}
+.form .contact-form{
+    box-shadow: 0px 4px 44px 0px rgb(17 29 48 / 6%);
+    padding: 28px 25px 20px 25px;
+    border-radius: 10px;
+}
+.form .contact-form input, .form .contact-form textarea{
+    display: block;
+    width: 100%;
+    padding: 11px 14px 10px 14px;
+    margin-bottom: 1em;
+    border: 1px solid #ebeced;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form .contact-form textarea{
+    resize: vertical;
+}
+.form .contact-form .theme-btn{
+    width: auto;
+    text-transform: uppercase;
+}
+
+.subscribe{
+    background-color: #FDFDFF;
+}
+.subscribe .container{
+    padding: 90px 5px;
+    max-width: 590px;
+    margin: 0 auto;
+}
+.subscribe .section-title{
+    text-align: center;
+}
+.subscribe-area{
+    display: flex;
+    width: 100%;
+}
+.subscribe input{
+    border: none;
+}
+.subscribe input[type="email"]{
+    box-shadow: 0px 4px 44px 0px rgb(17 29 48 / 6%);
+    padding: 15px 0px 14px 18px;
+    flex-grow: 1;
+    width: 80%;
+}
+.subscribe input[type="submit"]{
+    /* flex-shrink: 1; */
+    text-transform: uppercase;
+}
+/* footer */
+footer .row{
+    align-items: flex-start;
+}
+footer a{
+    display: block;
+}
+footer .col .logo{
+    margin-bottom: 20px;
+}
+footer .col a{
+    color: #5d6678;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.3em;
+    transition: color 1s;
+    margin-bottom: 13.4px;
+}
+footer .col a span{
+    color: var(--theme-color);
+    font-weight: 400;
+}
+footer .col .section-sub-title{
+    margin-bottom: 30px;
+    color: #1d273b;
+    font-size: 30px;
+    line-height: 1.3em;
+}
+footer .col .link-group a:hover{
+    color: var(--theme-color);
+}
+footer .icon-group{
+    display: flex;
+}
+footer .icon-group i{
+    color: #c0c7d2;
+    width: 1em;
+    height: 1em;
+    font-size: 15px;
+    padding: 0.7em;
+    text-align: center;
+    border: 1px solid #c0c7d2;
+    border-radius: 50%;
+    margin-right: 8px;
+    background-color: #fff;
+    transition: .5s;
+}
+footer .icon-group i:hover{
+    color: #fff;
+    background-color: var(--theme-color);
+    border-color: var(--theme-color);
+
+}
+
 
 /* RWD */
 @media screen and (min-width: 768px) {
@@ -374,6 +496,7 @@ header nav.flex{
     }
     .theme-btn:hover{
         background-color: var(--btn-hover-bgc);
+        box-shadow: none;
     }
     .btn-reverse:hover{
         color: #fff;
@@ -447,6 +570,9 @@ header nav.flex{
         width: 100px;
         margin-right: 50px;
     }
+    .projects .col .card-overlay{
+        transition:  opacity 1s;
+    }
     .projects .col:hover .card-overlay{
         color: #fff;
         font-size: var(--section-title-fz);
@@ -457,6 +583,7 @@ header nav.flex{
         left: 0;
         width: 100%;
         height: 100%;
+        opacity: 1;
         display: block;
         padding: 80px 30px;
         box-sizing: border-box;
@@ -466,5 +593,12 @@ header nav.flex{
         font-size: 20px;
         position: absolute;
         bottom: 100px;
+    }
+    .projects .col:hover .card-overlay p, .projects .col .card-overlay{
+        opacity: 1;
+        display: block;
+    }
+    footer .col .section-sub-title{
+        font-size: 20px;
     }
 }
